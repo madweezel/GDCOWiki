@@ -140,3 +140,6 @@ wfLoadSkin( 'Modern' );
 # End of automatically generated settings.
 # Add more configuration options below.
 
+
+error_reporting( E_ALL );
+ini_set( 'display_errors', 1 );
