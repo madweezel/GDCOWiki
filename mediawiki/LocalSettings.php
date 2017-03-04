@@ -128,14 +128,14 @@ $wgGroupPermissions['*']['edit'] = false;
 
 ## Default skin: you can change the default skin. Use the internal symbolic
 ## names, ie 'vector', 'monobook':
-$wgDefaultSkin = "Vector";
+$wgDefaultSkin = "Modern";
 
 # Enabled extensions. Most of the extensions are enabled by adding
 # wfLoadExtensions('ExtensionName');
 # to LocalSettings.php. Check specific extension documentation for more details.
 # The following extensions were automatically enabled:
 wfLoadExtension( 'MW-OAuth2Client' );
-
+wfLoadSkin( 'Modern' );
 
 # End of automatically generated settings.
 # Add more configuration options below.
