@@ -135,11 +135,12 @@ $wgDefaultSkin = "Modern";
 # to LocalSettings.php. Check specific extension documentation for more details.
 # The following extensions were automatically enabled:
 wfLoadExtension( 'MW-OAuth2Client' );
-wfLoadSkin( 'Modern' );
+
 
 # End of automatically generated settings.
 # Add more configuration options below.
-
+wfLoadSkin( 'MonoBook' );
+wfLoadSkin( 'Modern' );
 
 error_reporting( E_ALL );
 ini_set( 'display_errors', 1 );
