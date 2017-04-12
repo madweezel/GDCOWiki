@@ -77,7 +77,7 @@ $wgMemCachedServers = [];
 
 ## To enable image uploads, make sure the 'images' directory
 ## is writable, then set this to true:
-$wgEnableUploads = false;
+$wgEnableUploads = true;
 #$wgUseImageMagick = true;
 #$wgImageMagickConvertCommand = "/usr/bin/convert";
 
@@ -125,6 +125,9 @@ $wgDiff3 = "";
 # The following permissions were set based on your choice in the installer
 $wgGroupPermissions['*']['createaccount'] = false;
 $wgGroupPermissions['*']['edit'] = false;
+$wgGroupPermissions['user']['upload'] = false;
+$wgGroupPermissions['uploadaccess']['upload'] = true;
+
 
 ## Default skin: you can change the default skin. Use the internal symbolic
 ## names, ie 'vector', 'monobook':
@@ -134,7 +137,6 @@ $wgDefaultSkin = "Vector";
 # wfLoadExtensions('ExtensionName');
 # to LocalSettings.php. Check specific extension documentation for more details.
 # The following extensions were automatically enabled:
-wfLoadExtension( 'MW-OAuth2Client' );
 
 
 # End of automatically generated settings.
@@ -145,3 +147,31 @@ wfLoadSkin( 'Modern' );
 
 error_reporting( E_ALL );
 ini_set( 'display_errors', 1 );
+
+# Set Allowed File Extensions for upload
+$wgUploadDirectory = D:\\home\\site\\uploads;
+$wgFileExtensions = array( 'png', 'gif', 'jpg', 'jpeg', 'pdf' );
+$wgFileBlacklist = array('exe');
+
+
+#
+# OAUTH Setup
+#
+
+# wfLoadExtension( 'MW-OAuth2Client' );
+
+
+# $wgOAuth2Client['client']['id']     = ''; // The client ID assigned to you by the provider
+# $wgOAuth2Client['client']['secret'] = ''; // The client secret assigned to you by the provider
+# 
+# $wgOAuth2Client['configuration']['authorize_endpoint']     = ''; // Authorization URL
+# $wgOAuth2Client['configuration']['access_token_endpoint']  = ''; // Token URL
+# $wgOAuth2Client['configuration']['api_endpoint']           = ''; // URL to fetch user JSON
+# $wgOAuth2Client['configuration']['redirect_uri']           = ''; // URL for OAuth2 server to redirect to
+# 
+# $wgOAuth2Client['configuration']['username'] = 'username'; // JSON path to username
+# $wgOAuth2Client['configuration']['email'] = 'email'; // JSON path to email
+
+
+
+
