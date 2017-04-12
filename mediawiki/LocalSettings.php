@@ -125,8 +125,7 @@ $wgDiff3 = "";
 # The following permissions were set based on your choice in the installer
 $wgGroupPermissions['*']['createaccount'] = false;
 $wgGroupPermissions['*']['edit'] = false;
-$wgGroupPermissions['user']['upload'] = false;
-$wgGroupPermissions['uploadaccess']['upload'] = true;
+
 
 
 ## Default skin: you can change the default skin. Use the internal symbolic
@@ -149,6 +148,9 @@ error_reporting( E_ALL );
 ini_set( 'display_errors', 1 );
 
 # Set Allowed File Extensions for upload
+$wgGroupPermissions['user']['upload'] = true;
+# $wgGroupPermissions['uploadaccess']['upload'] = true;
+
 $wgUploadDirectory = D:\\home\\site\\uploads;
 $wgFileExtensions = array( 'png', 'gif', 'jpg', 'jpeg', 'pdf' );
 $wgFileBlacklist = array('exe');
