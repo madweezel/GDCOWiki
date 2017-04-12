@@ -151,7 +151,7 @@ ini_set( 'display_errors', 1 );
 $wgGroupPermissions['user']['upload'] = true;
 # $wgGroupPermissions['uploadaccess']['upload'] = true;
 
-$wgUploadDirectory = "D:\\home\\site\\wwwroot\\uploads";
+#  $wgUploadDirectory = "D:\\home\\site\\wwwroot\\uploads";
 $wgFileExtensions = array( 'png', 'gif', 'jpg', 'jpeg', 'pdf' );
 $wgFileBlacklist = array('exe');
 
